@@ -1,0 +1,25 @@
+package com.example.freelancer_matching_platform.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Feedback {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	private String comment;
+	private int rating;
+
+	@ManyToOne
+	private Project project;
+
+}
+
+
+
+
